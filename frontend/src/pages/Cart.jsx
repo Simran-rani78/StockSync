@@ -116,7 +116,9 @@ const Cart = () => {
   const formatImageSource = (url) => {
     if (!url) return null;
     if (url.startsWith('http')) return url;
-    return `http://localhost:5000${url}`;
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+    const backendBase = apiUrl.replace(/\/api\/?$/, '');
+    return `${backendBase}${url}`;
   };
 
   // Pricing calculations

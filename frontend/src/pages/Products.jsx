@@ -111,8 +111,10 @@ const Products = () => {
     setProdImage(null);
     
     // Resolve proper image preview url
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+    const backendBase = apiUrl.replace(/\/api\/?$/, '');
     const imgUrl = product.imageUrl 
-      ? (product.imageUrl.startsWith('http') ? product.imageUrl : `http://localhost:5000${product.imageUrl}`)
+      ? (product.imageUrl.startsWith('http') ? product.imageUrl : `${backendBase}${product.imageUrl}`)
       : null;
     setImagePreview(imgUrl);
     setFormError('');
@@ -239,7 +241,9 @@ const Products = () => {
   const formatImageSource = (url) => {
     if (!url) return null;
     if (url.startsWith('http')) return url;
-    return `http://localhost:5000${url}`;
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+    const backendBase = apiUrl.replace(/\/api\/?$/, '');
+    return `${backendBase}${url}`;
   };
 
   return (
