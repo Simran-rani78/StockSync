@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white;
+  }
+}
+
+/* Premium glassmorphic utility classes */
+.glass {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* --- LIGHT MODE COMPREHENSIVE OVERRIDES --- */
+body.light {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+body.light .bg-slate-950 {
+  background-color: #f8fafc !important;
+}
+
+body.light .bg-slate-900 {
+  background-color: #ffffff !important;
+}
+
+body.light .bg-slate-900\/40 {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+body.light .bg-slate-900\/30 {
+  background-color: rgba(241, 245, 249, 0.6) !important;
+}
+
+body.light .bg-slate-900\/20 {
+  background-color: rgba(241, 245, 249, 0.4) !important;
+}
+
+body.light .bg-slate-950\/40 {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+body.light .bg-slate-950\/80 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.light .bg-slate-900\/10 {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.light .bg-slate-800 {
+  background-color: #f1f5f9 !important;
+}
+
+body.light .bg-slate-850 {
+  background-color: #f1f5f9 !important;
+}
+
+body.light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+body.light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+body.light .text-slate-250 {
+  color: #1e293b !important;
+}
+
+body.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+body.light .text-slate-350 {
+  color: #334155 !important;
+}
+
+body.light .text-slate-400 {
+  color: #475569 !important;
+}
+
+body.light .text-slate-450 {
+  color: #475569 !important;
+}
+
+body.light .text-slate-550 {
+  color: #475569 !important;
+}
+
+body.light .text-slate-655 {
+  color: #64748b !important;
+}
+
+body.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+body.light .border-slate-800 {
+  border-color: #cbd5e1 !important;
+}
+
+body.light .border-slate-800\/80 {
+  border-color: rgba(203, 213, 225, 0.8) !important;
+}
+
+body.light .border-slate-800\/60 {
+  border-color: rgba(203, 213, 225, 0.6) !important;
+}
+
+body.light .border-slate-800\/40 {
+  border-color: rgba(203, 213, 225, 0.4) !important;
+}
+
+body.light .border-slate-800\/30 {
+  border-color: rgba(203, 213, 225, 0.3) !important;
+}
+
+body.light .border-slate-850 {
+  border-color: #e2e8f0 !important;
+}
+
+body.light .divide-slate-850 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #e2e8f0 !important;
+}
+
+body.light .divide-slate-800 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #cbd5e1 !important;
+}
+
+body.light .glass {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  color: #0f172a !important;
+}
+
+body.light .glass-panel {
+  background: rgba(241, 245, 249, 0.6) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 23, 42, 0.06) !important;
+  color: #0f172a !important;
+}
+
+body.light .hover\:bg-slate-800\/40:hover {
+  background-color: rgba(241, 245, 249, 0.8) !important;
+}
+
+body.light .hover\:bg-slate-800:hover {
+  background-color: #e2e8f0 !important;
+}
+
+body.light .hover\:bg-slate-900\/20:hover {
+  background-color: rgba(241, 245, 249, 0.5) !important;
+}
+
+body.light .hover\:text-slate-200:hover {
+  color: #0f172a !important;
+}
+
+body.light input, body.light select, body.light textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+body.light input:focus, body.light select:focus, body.light textarea:focus {
+  border-color: #7583ff !important;
+}
+
+body.light ::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.1) !important;
+}
+
+body.light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.25) !important;
+}
+
+body.light .from-white {
+  --tw-gradient-from: #0f172a !important;
+  --tw-gradient-to: rgba(15, 23, 42, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+body.light .via-slate-100 {
+  --tw-gradient-to: rgba(30, 41, 59, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #1e293b, var(--tw-gradient-to) !important;
+}
+
+body.light .to-slate-400 {
+  --tw-gradient-to: #475569 !important;
+}
+
+body.light .fixed.inset-0.bg-slate-950\/80 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
